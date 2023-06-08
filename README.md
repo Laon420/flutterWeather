@@ -24,4 +24,9 @@ open weather api를 이용해 도시를 검색할경우 그에 맞는 도시의 
 
 ![list](https://github.com/Laon420/flutterWeather/assets/95477323/ba36c9bd-0803-43ac-adb9-fdc104acb21c)
 
-도시 버튼을 누르면 간단한 국내와 해외 도시 영어명을 알 수 있습니다.
+도시 버튼을 누르면 간단한 국내와 해외 도시 영어명을 알 수 있습니다
+
+
+![search](https://github.com/Laon420/flutterWeather/assets/95477323/d04afeb8-aafa-4e5f-88b1-1643ef8b2b26)
+
+Google 검색 버튼을 누를시 날씨를 검색한 도시의 구글 검색을 브라우저로 보여줍니다
