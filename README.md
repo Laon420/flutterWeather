@@ -1,16 +1,10 @@
 # weather_app
 
-A new Flutter project.
+플러터로 만든 날씨 앱 입니다.
 
-## Getting Started
+## 사용한 하드웨어
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="278" alt="image" src="https://github.com/Laon420/flutterWeather/assets/95477323/e70c342f-6338-47f6-a8ad-76b594b7bd2a">
