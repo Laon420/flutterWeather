@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'weather.dart';
 import 'map.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -18,6 +20,15 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+void _launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 
 class WeatherApp extends StatefulWidget {
   const WeatherApp({Key? key}) : super(key: key);
@@ -125,6 +136,14 @@ class _WeatherAppState extends State<WeatherApp> {
                 },
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                final url = 'https://www.google.com/search?q=${_cityController.text}';
+                _launchURL(url);
+              },
+              child: Text('Google 검색'),
+            ),
+
             ElevatedButton(
                 onPressed: (){
                   Navigator.push(
