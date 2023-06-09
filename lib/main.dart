@@ -45,7 +45,7 @@ class _WeatherAppState extends State<WeatherApp> {
   @override
   void initState() {
     super.initState();
-    _futureWeather = _fetchWeather('Busan');
+    _futureWeather = _fetchWeather('Busan'); // 기본 설정을 부산으로
   }
 
   Future<Weather> _fetchWeather(String city) async {
@@ -65,13 +65,13 @@ class _WeatherAppState extends State<WeatherApp> {
     if (city.isNotEmpty) {
       setState(() {
         _errorMessage = '';
-        _futureWeather = _fetchWeather(city);
+        _futureWeather = _fetchWeather(city); //기본설정 부산 업데이트
       });
     }
   }
 
   @override
-  void dispose() {
+  void dispose() {  //state객체 없어질때 호출
     _cityController.dispose();
     super.dispose();
   }
@@ -79,13 +79,14 @@ class _WeatherAppState extends State<WeatherApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(
         title: Text('날씨 어플'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start, //새로 배열
           children: [
             Text(
               '도시 이름을 입력하세요:',
@@ -152,14 +153,14 @@ class _WeatherAppState extends State<WeatherApp> {
                   );
                 },
                 child: Text('지도')),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CityNamesPage()),
-            );
-          },
-          child: Text('도시명 보기'),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CityNamesPage()),
+                  );
+                  },
+              child: Text('도시명 보기'),
             ),
           ],
         ),
